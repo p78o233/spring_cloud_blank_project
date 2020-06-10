@@ -6,7 +6,7 @@ package com.example.consumerdemo.controller;/*
 import com.example.api.domain.User;
 import com.example.consumerdemo.service.DemoFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -29,14 +29,14 @@ public class DemoController {
         return demoFeignService.user(user);
     }
 
-    @RequestMapping(value = "/my", method = RequestMethod.GET)
-    public void myDetail() {
-        Map curUser = (Map) SecurityContextHolder.getContext()
-                .getAuthentication()
-                .getPrincipal();
-
-        String userName = (String)curUser.get("username");
-        return ;
-    }
+//    @RequestMapping(value = "/my", method = RequestMethod.GET)
+//    public void myDetail() {
+//        Map curUser = (Map) SecurityContextHolder.getContext()
+//                .getAuthentication()
+//                .getPrincipal();
+//
+//        String userName = (String)curUser.get("username");
+//        return ;
+//    }
 
 }
