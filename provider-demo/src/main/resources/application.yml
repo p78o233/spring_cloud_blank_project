@@ -3,11 +3,11 @@ server:
   port: 8091
 
 eureka:
-  #eueka Ö÷»úÃû
+  #eueka ä¸»æœºå
   instance:
     hostname: localhost
   client:
-    #Ìá¹©ÕßºÍÏû·ÑÕßµÄ×¢²áµØÖ·
+    #æä¾›è€…å’Œæ¶ˆè´¹è€…çš„æ³¨å†Œåœ°å€
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
     server:
@@ -24,38 +24,38 @@ spring.datasource:
   password: root
   driver-class-name: com.mysql.jdbc.Driver
   druid:
-    #³õÊ¼»¯Ê±½¨Á¢ÎïÀíÁ¬½ÓµÄ¸öÊı
+    #åˆå§‹åŒ–æ—¶å»ºç«‹ç‰©ç†è¿æ¥çš„ä¸ªæ•°
     initialSize: 1
-    #³ØÖĞ×î´óÁ¬½ÓÊı
+    #æ± ä¸­æœ€å¤§è¿æ¥æ•°
     maxActive: 20
-    #×îĞ¡¿ÕÏĞÁ¬½Ó
+    #æœ€å°ç©ºé—²è¿æ¥
     minIdle: 1
-    #»ñÈ¡Á¬½ÓÊ±×î´óµÈ´ıÊ±¼ä£¬µ¥Î»ºÁÃë
+    #è·å–è¿æ¥æ—¶æœ€å¤§ç­‰å¾…æ—¶é—´ï¼Œå•ä½æ¯«ç§’
     maxWait: 60000
-    #ÓĞÁ½¸öº¬Òå£º
-    #1) DestroyÏß³Ì»á¼ì²âÁ¬½ÓµÄ¼ä¸ôÊ±¼ä
-    #Èç¹ûÁ¬½Ó¿ÕÏĞÊ±¼ä´óÓÚµÈÓÚminEvictableIdleTimeMillisÔò¹Ø±ÕÎïÀíÁ¬½Ó¡£
-    #2) testWhileIdleµÄÅĞ¶ÏÒÀ¾İ£¬ÏêÏ¸¿´testWhileIdleÊôĞÔµÄËµÃ÷
+    #æœ‰ä¸¤ä¸ªå«ä¹‰ï¼š
+    #1) Destroyçº¿ç¨‹ä¼šæ£€æµ‹è¿æ¥çš„é—´éš”æ—¶é—´
+    #å¦‚æœè¿æ¥ç©ºé—²æ—¶é—´å¤§äºç­‰äºminEvictableIdleTimeMillisåˆ™å…³é—­ç‰©ç†è¿æ¥ã€‚
+    #2) testWhileIdleçš„åˆ¤æ–­ä¾æ®ï¼Œè¯¦ç»†çœ‹testWhileIdleå±æ€§çš„è¯´æ˜
     timeBetweenEvictionRunsMillis: 60000
-    #Á¬½Ó±£³Ö¿ÕÏĞ¶ø²»±»ÇıÖğµÄ×îĞ¡Ê±¼ä£¬µ¥Î»ÊÇºÁÃë
+    #è¿æ¥ä¿æŒç©ºé—²è€Œä¸è¢«é©±é€çš„æœ€å°æ—¶é—´ï¼Œå•ä½æ˜¯æ¯«ç§’
     minEvictableIdleTimeMillis: 300000
-    #Ê¹ÓÃ¸ÃSQLÓï¾ä¼ì²éÁ´½ÓÊÇ·ñ¿ÉÓÃ¡£
-    #Èç¹ûvalidationQuery=null£¬testOnBorrow¡¢testOnReturn¡¢testWhileIdle¶¼²»»áÆğ×÷ÓÃ¡£
+    #ä½¿ç”¨è¯¥SQLè¯­å¥æ£€æŸ¥é“¾æ¥æ˜¯å¦å¯ç”¨ã€‚
+    #å¦‚æœvalidationQuery=nullï¼ŒtestOnBorrowã€testOnReturnã€testWhileIdleéƒ½ä¸ä¼šèµ·ä½œç”¨ã€‚
     validationQuery: SELECT 1 FROM DUAL
-    #½¨ÒéÅäÖÃÎªtrue£¬²»Ó°ÏìĞÔÄÜ£¬²¢ÇÒ±£Ö¤°²È«ĞÔ¡£
-    #ÉêÇëÁ¬½ÓµÄÊ±ºò¼ì²â£¬
-    #Èç¹û¿ÕÏĞÊ±¼ä´óÓÚtimeBetweenEvictionRunsMillis£¬Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§¡£
+    #å»ºè®®é…ç½®ä¸ºtrueï¼Œä¸å½±å“æ€§èƒ½ï¼Œå¹¶ä¸”ä¿è¯å®‰å…¨æ€§ã€‚
+    #ç”³è¯·è¿æ¥çš„æ—¶å€™æ£€æµ‹ï¼Œ
+    #å¦‚æœç©ºé—²æ—¶é—´å¤§äºtimeBetweenEvictionRunsMillisï¼Œæ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆã€‚
     testWhileIdle: true
-    #ÉêÇëÁ¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬×öÁËÕâ¸öÅäÖÃ»á½µµÍĞÔÄÜ¡£
+    #ç”³è¯·è¿æ¥æ—¶æ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œåšäº†è¿™ä¸ªé…ç½®ä¼šé™ä½æ€§èƒ½ã€‚
     testOnBorrow: false
-    #¹é»¹Á¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬×öÁËÕâ¸öÅäÖÃ»á½µµÍĞÔÄÜ¡£
+    #å½’è¿˜è¿æ¥æ—¶æ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œåšäº†è¿™ä¸ªé…ç½®ä¼šé™ä½æ€§èƒ½ã€‚
     testOnReturn: false
-    # ÅäÖÃ¼à¿ØÍ³¼ÆÀ¹½ØµÄfilters£¬È¥µôºó¼à¿Ø½çÃæsqlÎŞ·¨Í³¼Æ£¬'wall'ÓÃÓÚ·À»ğÇ½
+    # é…ç½®ç›‘æ§ç»Ÿè®¡æ‹¦æˆªçš„filtersï¼Œå»æ‰åç›‘æ§ç•Œé¢sqlæ— æ³•ç»Ÿè®¡ï¼Œ'wall'ç”¨äºé˜²ç«å¢™
     filters: stat,wall,slf4j
-    # Í¨¹ıconnectPropertiesÊôĞÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂıSQL¼ÇÂ¼
+    # é€šè¿‡connectPropertieså±æ€§æ¥æ‰“å¼€mergeSqlåŠŸèƒ½ï¼›æ…¢SQLè®°å½•
     #connectionProperties.druid.stat.mergeSql: true
     #connectionProperties.druid.stat.slowSqlMillis: 5000
-    # ºÏ²¢¶à¸öDruidDataSourceµÄ¼à¿ØÊı¾İ
+    # åˆå¹¶å¤šä¸ªDruidDataSourceçš„ç›‘æ§æ•°æ®
     #useGlobalDataSourceStat: true
 
   tomcat:
