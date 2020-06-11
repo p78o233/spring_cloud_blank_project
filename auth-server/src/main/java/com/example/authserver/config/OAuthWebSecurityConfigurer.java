@@ -42,6 +42,7 @@ public class OAuthWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .roles("USER", "ADMIN");
     }
 
+
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();

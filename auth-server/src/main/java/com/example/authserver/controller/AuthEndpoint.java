@@ -25,4 +25,5 @@ public class AuthEndpoint {
         userInfo.put("authorities", AuthorityUtils.authorityListToSet( user.getUserAuthentication().getAuthorities()));
         return userInfo;
     }
+
 }
