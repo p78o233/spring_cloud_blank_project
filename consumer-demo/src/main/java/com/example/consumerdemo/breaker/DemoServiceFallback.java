@@ -3,7 +3,7 @@ package com.example.consumerdemo.breaker;/*
  * @date 2020/6/9
  */
 
-import com.example.api.domain.User;
+import com.example.commondemo.domain.User;
 import com.example.consumerdemo.service.DemoFeignService;
 import org.springframework.stereotype.Component;
 

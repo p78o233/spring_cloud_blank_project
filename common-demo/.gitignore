@@ -18,18 +18,6 @@ target/
 *.iws
 *.iml
 *.ipr
-/auth-server/*.iml
-/auth-server/target/
-/api/*.iml
-/api/target/
-/consumer-demo/*.iml
-/consumer-demo/target/
-/eureka/*.iml
-/eureka/target/
-/provider-demo/*.iml
-/provider-demo/target/
-/common-demo/*.iml
-/common-demo/target/
 
 ### NetBeans ###
 /nbproject/private/

@@ -1,4 +1,4 @@
-package com.example.api.domain;/*
+package com.example.commondemo.domain;/*
  * @author p78o2
  * @date 2020/6/8
  */

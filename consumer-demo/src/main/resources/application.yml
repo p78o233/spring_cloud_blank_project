@@ -16,6 +16,13 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+spring.datasource:
+  name: develop
+  url: jdbc:mysql://127.0.0.1:3306/oa?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=UTC
+  username: root
+  password: root
+  driver-class-name: com.mysql.jdbc.Driver
 #security配置
 #security:
 #  oauth2:

@@ -3,13 +3,11 @@ package com.example.consumerdemo.controller;/*
  * @date 2020/6/9
  */
 
-import com.example.api.domain.User;
+import com.example.commondemo.domain.User;
 import com.example.consumerdemo.service.DemoFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 public class DemoController {

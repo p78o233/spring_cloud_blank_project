@@ -3,7 +3,7 @@ package com.example.providerdemo.serviceImpl;/*
  * @date 2020/6/9
  */
 
-import com.example.api.domain.User;
+import com.example.commondemo.domain.User;
 import com.example.api.service.IDemoApi;
 import org.springframework.web.bind.annotation.RestController;
 
