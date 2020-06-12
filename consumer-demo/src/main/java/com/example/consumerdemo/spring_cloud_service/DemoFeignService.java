@@ -1,4 +1,4 @@
-package com.example.consumerdemo.service;/*
+package com.example.consumerdemo.spring_cloud_service;/*
  * @author p78o2
  * @date 2020/6/9
  */
