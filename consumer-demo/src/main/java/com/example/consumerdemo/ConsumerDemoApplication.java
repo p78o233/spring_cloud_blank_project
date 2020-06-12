@@ -7,9 +7,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 //security
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+//import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
-@EnableResourceServer
+//@EnableResourceServer
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient

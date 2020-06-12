@@ -25,7 +25,7 @@ spring.datasource:
   password: root
   driver-class-name: com.mysql.jdbc.Driver
 #security配置
-security:
-  oauth2:
-    resource:
-      user-info-uri:http://localhost:8290/auth/user
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri:http://localhost:8290/auth/user
