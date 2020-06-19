@@ -3,15 +3,8 @@ package com.example.consumerdemo.service;/*
  * @date 2020/6/12
  */
 
-import com.example.commondemo.domain.UserShiro;
-
-import java.util.List;
-import java.util.Set;
+import com.example.commondemo.domain.po.User;
 
 public interface UserService {
-    public Set<String> getRoles(String username);
-
-    public Set<String> getPermissions(String name);
-
-    public UserShiro getByUsername (String name);
+    public User getUserByName(String getMapByName);
 }

@@ -3,7 +3,7 @@ package com.example.api.service;/*
  * @date 2020/6/8
  */
 
-import com.example.commondemo.domain.User;
+import com.example.commondemo.domain.po.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

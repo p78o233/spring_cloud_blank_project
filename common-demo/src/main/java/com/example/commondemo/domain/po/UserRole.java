@@ -1,30 +1,27 @@
-package com.example.commondemo.domain;/*
+package com.example.commondemo.domain.po;/*
  * @author p78o2
- * @date 2020/6/11
+ * @date 2020/6/19
  */
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel("用户角色关联表")
-public class UserShiroRole {
+@ApiModel(value = "用户角色关联表")
+public class UserRole {
     @ApiModelProperty(value = "自增主键id")
     private int id;
-    @ApiModelProperty(value = "用户id")
-    private int userId;
     @ApiModelProperty(value = "角色id")
     private int roleId;
+    @ApiModelProperty(value = "用户id")
+    private int userId;
 
     @Override
     public String toString() {
-        return "UserShiroRole{" +
+        return "UserRole{" +
                 "id=" + id +
-                ", userId=" + userId +
                 ", roleId=" + roleId +
+                ", userId=" + userId +
                 '}';
-    }
-
-    public UserShiroRole() {
     }
 
     public int getId() {
@@ -35,14 +32,6 @@ public class UserShiroRole {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public int getRoleId() {
         return roleId;
     }
@@ -51,9 +40,20 @@ public class UserShiroRole {
         this.roleId = roleId;
     }
 
-    public UserShiroRole(int id, int userId, int roleId) {
-        this.id = id;
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public UserRole() {
+    }
+
+    public UserRole(int id, int roleId, int userId) {
+        this.id = id;
         this.roleId = roleId;
+        this.userId = userId;
     }
 }

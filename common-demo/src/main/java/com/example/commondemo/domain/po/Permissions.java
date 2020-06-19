@@ -1,20 +1,18 @@
-package com.example.commondemo.domain;/*
+package com.example.commondemo.domain.po;/*
  * @author p78o2
  * @date 2020/6/11
  */
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 
 @ApiModel(value = "权限表")
 public class Permissions {
-    @ApiModelProperty(value = "自增主键id")
-    private Integer id;
-    @ApiModelProperty(value = "权限名称")
+    @ApiModelProperty("主键id")
+    private int id;
+    @ApiModelProperty("权限名")
     private String permissionsName;
-
-    public Permissions() {
-    }
 
     @Override
     public String toString() {
@@ -24,11 +22,14 @@ public class Permissions {
                 '}';
     }
 
-    public Integer getId() {
+    public Permissions() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -40,7 +41,7 @@ public class Permissions {
         this.permissionsName = permissionsName;
     }
 
-    public Permissions(Integer id, String permissionsName) {
+    public Permissions(int id, String permissionsName) {
         this.id = id;
         this.permissionsName = permissionsName;
     }
