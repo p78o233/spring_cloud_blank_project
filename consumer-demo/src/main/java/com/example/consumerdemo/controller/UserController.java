@@ -14,6 +14,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/shiro")
 public class UserController {
     @PostMapping("/login")
     public String login(@RequestBody User user) {

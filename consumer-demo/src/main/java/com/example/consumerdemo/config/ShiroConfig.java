@@ -53,12 +53,12 @@ public class ShiroConfig {
         Map<String, String> map = new HashMap<>();
         //登出
         map.put("/logout", "logout");
-        //对所有用户认证
-        map.put("/**", "authc");
+        //对所有用户认证,对shiro路由下的url过滤
+        map.put("/shiro/**", "authc");
         //登录
-        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setLoginUrl("/shiro/login");
         //首页
-        shiroFilterFactoryBean.setSuccessUrl("/index");
+        shiroFilterFactoryBean.setSuccessUrl("/shiro/index");
         //错误页面，认证不通过跳转
         shiroFilterFactoryBean.setUnauthorizedUrl("/error");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
