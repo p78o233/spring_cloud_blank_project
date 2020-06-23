@@ -7,6 +7,7 @@ import com.example.commondemo.domain.po.Permissions;
 import com.example.commondemo.domain.po.Role;
 import com.example.commondemo.domain.po.User;
 import com.example.consumerdemo.service.UserService;
+import org.apache.catalina.Session;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
