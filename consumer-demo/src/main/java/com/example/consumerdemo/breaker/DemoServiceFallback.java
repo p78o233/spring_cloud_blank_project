@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DemoServiceFallback implements DemoFeignService {
+//    断路器
     @Override
     public String test(String test) {
         return "error";
