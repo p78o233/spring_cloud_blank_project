@@ -16,13 +16,17 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/shiro")
 public class UserController {
-    @PostMapping("/login")
-    public String login(@RequestBody User user) {
+    @GetMapping("/login/{userName}/{password}")
+    public String login(@PathVariable("userName")String userName,@PathVariable("password")String password) {
         //添加用户认证信息
         Subject subject = SecurityUtils.getSubject();
+//        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
+//                user.getUserName(),
+//                user.getPassword()
+//        );
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
-                user.getUserName(),
-                user.getPassword()
+                userName,
+                password
         );
         try {
             //进行验证，这里可以捕获异常，然后返回对应信息

@@ -6,6 +6,16 @@ spring:
     name: demo-customer
   main:
     allow-bean-definition-overriding: true
+
+  redis:
+    # redis服务器地址（默认为loaclhost）
+    host: 127.0.0.1
+    # redis端口（默认为6379）
+    post: 6379
+    # redis访问密码（默认为空）
+    password: 123456
+    # redis连接超时时间（单位毫秒）
+    timeout: 0
 eureka:
   #eueka 主机名
   instance:
