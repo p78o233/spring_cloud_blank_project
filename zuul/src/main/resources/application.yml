@@ -1,0 +1,21 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: demo-zuul
+eureka:
+  #eueka 主机名
+  instance:
+    hostname: 127.0.0.1
+  client:
+    #提供者和消费者的注册地址
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+zuul:
+  routes:
+#    对接的服务的application-name
+    demo-customer:
+#      访问的前缀127.0.0.1：8005/demo-zuul/**
+      path: /demo-zuul/**
+      serviceId: demo-customer

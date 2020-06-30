@@ -17,7 +17,8 @@ public class DempProviderController implements IDemoApi {
     @Override
     public User user(User user) {
         if (user == null) {
-            user = new User(10, "Joab-Y");
+            user = new User();
+            user.setAge(1);
         }
         return user;
     }
