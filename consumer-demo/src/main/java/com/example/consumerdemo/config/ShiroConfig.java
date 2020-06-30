@@ -59,6 +59,7 @@ public class ShiroConfig {
         //登出
         map.put("/logout", "logout");
         //对所有用户认证,对shiro路由下的url过滤
+//        authc 表示需要登陆才能访问的接口
         map.put("/shiro/**", "authc");
         //登录
         shiroFilterFactoryBean.setLoginUrl("/shiro/login");
