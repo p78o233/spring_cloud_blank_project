@@ -12,6 +12,8 @@ eureka:
     #提供者和消费者的注册地址
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    refresh:
+      enabled: true
 zuul:
   routes:
 #    对接的服务的application-name
@@ -19,3 +21,23 @@ zuul:
 #      访问的前缀127.0.0.1：8005/demo-zuul/**
       path: /demo-zuul/**
       serviceId: demo-customer
+  ratelimit:
+    enabled: true
+    default-polic:
+      limit: 3
+      refresh-interval: 60
+      type: origin
+
+#超时处理 这里面ribbon和hystrix是同时生效的，哪个值小哪个生效，另一个就看不到效果了
+ribbon:
+  ReadTimeout: 3050
+  SocketTimeout: 3050
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000

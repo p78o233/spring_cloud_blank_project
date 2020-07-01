@@ -19,6 +19,37 @@ public class DemoController {
         return demoFeignService.test("test");
     }
 
+
+    @GetMapping("/test1")
+    public Object test1() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "dbToEs";
+    }
+
+    @GetMapping("/test2")
+    public Object test2() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "dbToEs";
+    }
+
+    @GetMapping("/test3")
+    public Object test3() {
+        try {
+            Thread.sleep(5500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "dbToEs";
+    }
+
     @PostMapping("/user")
     public User user() {
         User user = new User();
